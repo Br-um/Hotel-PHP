@@ -1,0 +1,46 @@
+@font-face {
+    font-family: gow;
+    src: url('../font/GODOFWAR.TTF');
+}
+
+body,html{
+    margin: 0;
+    font-family: gow;
+}
+#body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://gmedia.playstation.com/is/image/SIEPDC/god-of-war-hub-ragnarok-4kwallpaper-en-09sept21?$native$);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+h1{
+    font-size: 50px;
+    display: flex;
+    margin-left: 44%;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    flex-direction: column;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 35px;
+    box-shadow: 0px 10px 25px;
+}
+fieldset{
+    width: 200px;
+    margin: 5px;
+}
+button{
+    margin: 10px;
+    width: 75px;
+    height: 40px;
+}
