@@ -48,9 +48,8 @@ include("user-class.php");
             "<br>Email: ".$userClass->getEmail().
             "<br>RG: ".$userClass->getRg().
             "<br>Telefone: ".$userClass->getPhone().
-            "<br>Suíte: ".getSuite().
-            "<br>Diárias: ".getDays().
-            "";
+            "<br>Suíte: ".$this->suite.
+            "<br>Diárias: ".$this->days;
         }
     }
     $userClass = new UserGetSet;
@@ -62,5 +61,28 @@ include("user-class.php");
     $userClass->setPhone($_POST['phone']);
     $hotelSchedling->setSuite($_POST['suite']);
     $hotelSchedling->setDays($_POST['days']);
-    $hotelSchedling->toString($userClass);
+
+
+    echo "
+    <!DOCTYPE html>
+    <html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' href='../public/css/css.css'>
+        <title>Resultados Do Agendamento</title>
+    </head>
+    
+    <body>
+        <div id='body'>
+            <h1>Hotel</h1>
+            <form action=''>
+                <h3>Resultados: </h3>
+                 ".$hotelSchedling->toString($userClass)."
+            </form>
+        </div>
+    </body>
+    
+    </html>"
 ?>
