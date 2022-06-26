@@ -42,6 +42,27 @@ include("user-class.php");
 
                 return $this;
         }
+        public function suiteValue(){
+                switch($this->suite){
+                        case 'Suíte Double Master':
+                                return $this->suite = 150.00;
+                                break;
+
+                                case 'Suíte Família':
+                                        return $this->suite = 180.00;
+                                        break;
+
+                                        case 'Suíte Single':
+                                                return $this->suite = 100.00;
+                                                break;
+
+                                                default: 'Suite nao existente';
+                }
+        }
+        public function totalValue(){
+                $totalValue = $this->suite * $this->days;
+                return $totalValue;
+        }
 
         public function toString($userClass){
             return "Nome: ".$userClass->getName().
@@ -49,7 +70,9 @@ include("user-class.php");
             "<br>RG: ".$userClass->getRg().
             "<br>Telefone: ".$userClass->getPhone().
             "<br>Suíte: ".$this->suite.
-            "<br>Diárias: ".$this->days;
+            "<br>Valor da Suíte: ".$this->suiteValue().
+            "<br>Diárias: ".$this->days.
+            "<br>Valor Total: ".$this->totalValue();
         }
     }
     $userClass = new UserGetSet;
